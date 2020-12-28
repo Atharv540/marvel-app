@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="p5.play.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script src="https://use.fontawesome.com/122b3c7be5.js"></script>
+    <script src="https://kit.fontawesome.com/ccd7270aeb.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="modal" id="profile-details">
+      <div class="modal-content">
+        <h4 id="profile-details-heading">Change Profile</h4>
+        <form id="profile-form">
+          <div class="input-field">
+            <input type="email" disabled="true" id="profile-email" style="color: red;">
+            <label for="profile-email" style="color: red;">Email ID</label>
+          </div><br>
+          <div class="input-field">
+            <input type="text" id="profile-username" placeholder="Username">
+          </div><br>
+          <div class="input-field">
+            <input type="url" id="profile-logo" placeholder="Logo URL">
+          </div><br>
+          <button class="btn red">
+            CHANGE PROFILE
+          </button>
+        </form>
+    </div>
+    </div>
+
+    <img id="logo-img" class="logo-img"/>
+    <div>
+        <div class="description">
+          <ul>
+            <li>
+              <span>Name</span>
+              <h5 id="name-li"></h5>
+            </li>
+            <li>
+              <span>Email Address</span>
+              <h5 id="email-li"></h5>
+            </li>
+            <li>
+              <span>Followers</span>
+              <h5 id="followers-li"></h5>
+            </li>
+            <li style="border-left: black;">
+              <a href="#profile-details" class="btn red modal-trigger">CHANGE PROFILE</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <br><br><br><br>
+    <h4 class="heading">The most popular comics of yours</h4>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyD4xRXPLgPJvXCszv5E7M9ErHt7jx9vxt0",
+        authDomain: "images-7f9a6.firebaseapp.com",
+        databaseURL: "https://images-7f9a6.firebaseio.com",
+        projectId: "images-7f9a6",
+        storageBucket: "images-7f9a6.appspot.com",
+        messagingSenderId: "189833659847",
+        appId: "1:189833659847:web:93e92ab1815df1d4ce05e2",
+        measurementId: "G-YQRYKCJJXP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+    db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="comic-profile.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.modal').modal();
+            })
+        </script>
+        <style>
+          body{
+            background: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+          }
+          .modal{
+            background-color: black;
+          }
+          input:focus {
+                border-bottom: 1px solid red !important;
+                box-shadow: 0 1px 0 0 red !important;
+          }
+          label.active {
+            color: red !important;
+          }
+          .input-field input{
+                color: red;
+                font-family: Roboto;
+          }
+          .description ul{
+              width: 100%;
+              margin: 70px 0;
+          }
+
+          .description ul li{
+              list-style: none;
+              width: 100%;
+              margin-bottom: 20px;
+              padding: 5px 20px 5px 20px;
+              border-left: 2.5px solid #8895b5;
+              margin-left: 400px;
+              color: white;
+          }
+
+          .description ul li span{
+              font-family: 'Open sans', sans serif;
+              font-size: 15px;
+              margin: 0;
+          }
+
+          .description ul li h5{
+              font-family: 'Open sans', sans serif;
+              font-size: 15px;
+              margin: 0;
+          }
+          .logo-img{
+            float: left;
+            height: 400px;
+            border-radius: 15px;
+            margin-right: 100px;
+          }
+
+          .heading{
+            color: white;
+            font-family: 'Open sans', sans serif;
+          }
+
+        </style>
+  </body>
+</html>

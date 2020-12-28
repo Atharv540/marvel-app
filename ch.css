@@ -1,0 +1,24 @@
+body{
+  background-image: url("https://wallpaperaccess.com/full/346410.jpg");
+}
+button {
+    width: 220px;
+    height: 320px;
+    background-color: #152B3A; 
+    border: none;
+    transition: width 2s;
+  }
+  
+  button:hover {
+    width: 300px;
+  }
+  img {
+    width: 140px;
+    height: 190px;
+    transition: width 2s, height 2s;
+  }
+  
+  img:hover {
+    width:220px;
+    height: 270px;
+  }

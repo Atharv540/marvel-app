@@ -1,0 +1,133 @@
+
+body{
+    background: url('https://wallpapercave.com/wp/wp4194066.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.overlap{
+    background: rgb(2, 31, 63, 0.863);
+    height: 366%;
+    width: 100%;
+    margin-bottom: -90px;
+    margin-top: -20px;
+    margin-left: -8px;
+}
+
+.intro-img-1{
+    float: left;
+}
+
+.movie-description ul{
+    width: 100%;
+    margin: 70px 0;
+}
+
+.movie-description ul li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 20px 5px 20px;
+    border-left: 2.5px solid #8895b5;
+    margin-left: 500px;
+    color: white;
+}
+
+.movie-description ul li span{
+    font-family: 'Open sans', sans serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.movie-description ul li h5{
+    font-family: 'Open sans', sans serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.trailer_button{
+    padding: 25px 50px;
+    color: white;
+    background-color: #1b69bddc;
+    border: none;
+    font-family: 'Open sans', sans serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.description{
+    font-family: Roboto;
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.description-image{
+    float: right;
+    margin-right: 100px;
+}
+
+.appearances-heading{
+    font-family: 'Open Sans', sans serif;
+    color: white;
+    margin-left: 20px;
+}
+
+.app-movie{
+    font-family: 'Open sans', sans serif;
+    font-size: 12px;
+    color: white;
+}
+
+.app-movie:hover{
+    color: #1b47d6;
+}
+
+.creator img{
+    border-radius: 10px;
+    float: left;
+}
+
+.creator span{
+    font-family: Roboto;
+    background-color:  #1b69bddc;
+    display: inline-block;
+    width: 200px;
+    color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.actor-description ul{
+    width: 100%;
+    margin: 70px 0;
+}
+
+.actor-description ul li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 20px 5px 20px;
+    border-left: 2.5px solid #8895b5;
+    margin-left: 400px;
+    color: white;
+}
+
+.actor-description ul li span{
+    font-family: 'Open sans', sans serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.actor-description ul li h5{
+    font-family: 'Open sans', sans serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+a{
+    color: orange;
+}
