@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: red;
+}
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    background: url('3[950].jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+.banner .navbar{
+    margin-top: 4%;
+}
+
+.banner .navbar-brand{
+    color: red;
+    font-size: 2.8em;
+    font-family: Amatic SC;
+}
+
+.banner .navbar li a{
+    color: red;
+    font-size: 1.2em;
+    font-family: Roboto;
+}
+
+.banner .navbar li a:hover{
+    color: black;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.nav{
+    margin-left: 900px;
+}

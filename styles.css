@@ -1,0 +1,52 @@
+
+body{
+    background: #d87417;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    border-radius: 15px;
+    width: 180px;
+    height: 350px;
+    transition: all ease 1s;
+    transition: border all ease 1s;
+    background: radial-gradient(50% 50% at 50% 50%, #d41121 1.77%, #16171c 100%);
+    display: inline-block;
+    margin-right: 30px;
+    box-shadow: 5px 10px 8px #d39014;
+}
+
+.card-img{
+    width: 95%;
+    height: 70%;
+    margin-top: 20px;
+}
+
+.card-logo{
+    width: 95%;
+    margin-left: 5px;
+    height: 15%;
+}
+
+.spider-man-logo{
+    width: 80px;
+}
+
+.card:hover{
+    width: 250px;
+    height: 400px;
+}
+
+.card-logos{
+    width: 95%;
+    margin-left: 5px;
+    height: 25%;
+}
+
+.card-logo2{
+    width: 95%;
+    margin-left: 5px;
+    height: 10%;
+    margin-bottom: 15px;
+}
